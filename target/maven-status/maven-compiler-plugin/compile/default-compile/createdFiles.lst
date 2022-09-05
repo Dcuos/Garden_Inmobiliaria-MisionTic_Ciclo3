@@ -1,0 +1,5 @@
+Connection\DBConnection.class
+servlets\PruebaServlet.class
+Beans\Cliente.class
+Beans\Contrato.class
+Beans\Inmueble.class
