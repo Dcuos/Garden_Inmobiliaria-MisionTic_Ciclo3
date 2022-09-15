@@ -3,7 +3,7 @@ package Beans;
 
 public class Cliente {
     
-    private int id_cliente;
+
     private String usuario;
     private String contraseña;
     private String nombres;
@@ -11,9 +11,9 @@ public class Cliente {
     private String telefono;
     private String direccion_cliente;
     private boolean premium;
+    private double saldo;
 
-    public Cliente(int id_cliente, String usuario, String contraseña, String nombres, String apellidos, String telefono, String direccion_cliente, boolean premium) {
-        this.id_cliente = id_cliente;
+    public Cliente(String usuario, String contraseña, String nombres, String apellidos, String telefono, String direccion_cliente, boolean premium, double saldo) {
         this.usuario = usuario;
         this.contraseña = contraseña;
         this.nombres = nombres;
@@ -21,14 +21,7 @@ public class Cliente {
         this.telefono = telefono;
         this.direccion_cliente = direccion_cliente;
         this.premium = premium;
-    }
-
-    public int getId_cliente() {
-        return id_cliente;
-    }
-
-    public void setId_cliente(int id_cliente) {
-        this.id_cliente = id_cliente;
+        this.saldo = saldo;
     }
 
     public String getUsuario() {
@@ -87,11 +80,18 @@ public class Cliente {
         this.premium = premium;
     }
 
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
     @Override
     public String toString() {
-        return "Cliente{" + "id_cliente=" + id_cliente + ", usuario=" + usuario + ", contrase\u00f1a=" + contraseña + ", nombres=" + nombres + ", apellidos=" + apellidos + ", telefono=" + telefono + ", direccion_cliente=" + direccion_cliente + ", premium=" + premium + '}';
+        return "Cliente{" + "usuario=" + usuario + ", contrase\u00f1a=" + contraseña + ", nombres=" + nombres + ", apellidos=" + apellidos + ", telefono=" + telefono + ", direccion_cliente=" + direccion_cliente + ", premium=" + premium + ", saldo=" + saldo + '}';
     }
-    
-    
+
     
 }

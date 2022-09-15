@@ -7,21 +7,23 @@ public class Inmueble {
     private int id_inmueble;
     private String tipo_inmueble;
     private double precio;
-    private byte habitaciones;
-    private byte baños;
-    private float area_total;
-    private byte parqueadero;
+    private int habitaciones;
+    private int banos;
+    private double area_total;
+    private int parqueadero;
     private String direccion_inmueble;
+    private String descripcion;
 
-    public Inmueble(int id_inmueble, String tipo_inmueble, double precio, byte habitaciones, byte baños, float area_total, byte parqueadero, String direccion_inmueble) {
+    public Inmueble(int id_inmueble, String tipo_inmueble, double precio, int habitaciones, int banos, double area_total, int parqueadero, String direccion_inmueble, String descripcion) {
         this.id_inmueble = id_inmueble;
         this.tipo_inmueble = tipo_inmueble;
         this.precio = precio;
         this.habitaciones = habitaciones;
-        this.baños = baños;
+        this.banos = banos;
         this.area_total = area_total;
         this.parqueadero = parqueadero;
         this.direccion_inmueble = direccion_inmueble;
+        this.descripcion = descripcion;
     }
 
     public int getId_inmueble() {
@@ -48,35 +50,35 @@ public class Inmueble {
         this.precio = precio;
     }
 
-    public byte getHabitaciones() {
+    public int getHabitaciones() {
         return habitaciones;
     }
 
-    public void setHabitaciones(byte habitaciones) {
+    public void setHabitaciones(int habitaciones) {
         this.habitaciones = habitaciones;
     }
 
-    public byte getBaños() {
-        return baños;
+    public int getBanos() {
+        return banos;
     }
 
-    public void setBaños(byte baños) {
-        this.baños = baños;
+    public void setBanos(int banos) {
+        this.banos = banos;
     }
 
-    public float getArea_total() {
+    public double getArea_total() {
         return area_total;
     }
 
-    public void setArea_total(float area_total) {
+    public void setArea_total(double area_total) {
         this.area_total = area_total;
     }
 
-    public byte getParqueadero() {
+    public int getParqueadero() {
         return parqueadero;
     }
 
-    public void setParqueadero(byte parqueadero) {
+    public void setParqueadero(int parqueadero) {
         this.parqueadero = parqueadero;
     }
 
@@ -88,11 +90,17 @@ public class Inmueble {
         this.direccion_inmueble = direccion_inmueble;
     }
 
-    @Override
-    public String toString() {
-        return "Inmueble{" + "id_inmueble=" + id_inmueble + ", tipo_inmueble=" + tipo_inmueble + ", precio=" + precio + ", habitaciones=" + habitaciones + ", ba\u00f1os=" + baños + ", area_total=" + area_total + ", parqueadero=" + parqueadero + ", direccion_inmueble=" + direccion_inmueble + '}';
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    
-    
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    @Override
+    public String toString() {
+        return "Inmueble{" + "id_inmueble=" + id_inmueble + ", tipo_inmueble=" + tipo_inmueble + ", precio=" + precio + ", habitaciones=" + habitaciones + ", banos=" + banos + ", area_total=" + area_total + ", parqueadero=" + parqueadero + ", direccion_inmueble=" + direccion_inmueble + ", descripcion=" + descripcion + '}';
+    }
+
 }
