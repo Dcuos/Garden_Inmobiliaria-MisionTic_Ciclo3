@@ -97,5 +97,26 @@ public class UsuarioController implements IUsuarioController {
 
         return "false";
     }
+    @Override
+    public String restarDinero(String usuario, double nuevo_saldo) {
+        DBConnection con = new DBConnection();
+        String sql = "UPDATE cliente SET saldo = "+nuevo_saldo+"WHERE usuario ='" +usuario+"'";
+  
+        try {
+            Statement st = con.getConnection().createStatement();
+            st.executeUpdate(sql);
+            return "true";
+                        
+
+        }catch (Exception ex) {
+            System.out.println(ex.getMessage());
+
+        } finally {
+            con.desconectar();
+        }
+
+        return "false"; 
+    }
+    
     
 }

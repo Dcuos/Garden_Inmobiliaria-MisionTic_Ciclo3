@@ -8,3 +8,12 @@
 #form-container{
     width:40vw;
 }
+body{
+    background: url("../img/fondohom.jpg");
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+}
+/*body{
+    font-family: 'Noto Sans Mono', monoespacio;
+}*/

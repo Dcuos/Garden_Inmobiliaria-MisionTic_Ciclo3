@@ -8,4 +8,6 @@ public interface IUsuarioController {
             String telefono, String direccion_inmueble, boolean premium, double saldo);
     
     public String pedir(String usuario);
+    
+    public String restarDinero(String usuario, double nuevo_saldo); 
 }

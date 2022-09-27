@@ -1,5 +1,5 @@
-.bg-login-image{
-    background: url("../img/bg-login-image.jpeg");
+.bg-Logo-Garden2{
+    background: url("../img/bg-Logo-Garden2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 445px;
@@ -13,4 +13,10 @@ img{
     height: auto;
     max-width: 445px; 
     max-height: 445px
+}
+body{
+    background: url("../img/fondoinde.jpg");
+    background-size: cover;
+    
+    background-repeat: no-repeat;
 }

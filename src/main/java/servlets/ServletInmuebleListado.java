@@ -1,7 +1,7 @@
 
 package servlets;
 
-import Controller.UsuarioController;
+import Controller.muebleController;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -14,42 +14,40 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author dicdh
  */
-@WebServlet(name = "ServletUsuarioLogin", urlPatterns = {"/ServletUsuarioLogin"})
-public class ServletUsuarioLogin extends HttpServlet {
-    
+@WebServlet(name = "ServletInmuebleListado", urlPatterns = {"/ServletInmuebleListado"})
+public class ServletInmuebleListado extends HttpServlet {
+
     private static final long serialVersionUID = 1L;
-    public ServletUsuarioLogin(){
+    public ServletInmuebleListado(){
         super();
     }
-  
     
-
-   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        UsuarioController username = new UsuarioController();
+        muebleController inmuebless = new muebleController();
         
-        String usuario = request.getParameter("usuario");
-        String contraseña = request.getParameter("contraseña");
-        String result = username.login(usuario, contraseña);
+        boolean ordenar = Boolean.parseBoolean(request.getParameter("ordenar"));
+        String orden = request.getParameter("orden");
+        String mueblesStr = inmuebless.listar(ordenar, orden);
+
         
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        out.println(result);
+        out.println(mueblesStr);
         out.flush();
         out.close();
-
     }
 
-  
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doGet(request, response);
+      doGet(request, response);
+        
     }
 
-  
-   
+    
+    
 
 }

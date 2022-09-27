@@ -10,8 +10,8 @@ import Beans.Inmueble;
 public class OperacionesDB {
     
       public static void main(String[] args) {
-        listarcasas();
-         // actualiozarcasas(2, "pam");
+//    listarcasas();
+          actualiozarcasas(2, "pam");
          
     }
     public static void actualiozarcasas(int id_inmueble, String tipo_inmueble){
